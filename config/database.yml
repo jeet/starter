@@ -1,0 +1,39 @@
+<% PASSWORD_FILE = File.join(RAILS_ROOT, '..', '..', 'shared', 'config', 'dbpassword') %>
+
+development:
+  adapter: mysql
+  database: poppt_development
+  username: root
+  password: pwd
+  host: 127.0.0.1
+  encoding: utf8
+
+test: &TEST
+  adapter: mysql
+  database: poppt_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+staging:
+  adapter: mysql
+  database: poppt_staging
+  username: root
+  password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
+  host: localhost
+  encoding: utf8
+  socket: /var/lib/mysql/mysql.sock
+
+production:
+  adapter: mysql
+  database: poppt_production
+  username: auser
+  password: 
+  host: 
+  encoding: utf8
+#  socket: /var/lib/mysql/mysql.sock
+
+
+cucumber:
+  <<: *TEST
