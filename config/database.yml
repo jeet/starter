@@ -4,7 +4,7 @@ development:
   adapter: mysql
   database: poppt_development
   username: root
-  password: pwd
+  password: 
   host: 127.0.0.1
   encoding: utf8
 
