@@ -1,6 +1,14 @@
 --- 
 dependencies: 
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
   authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
+  searchlogic: 
     group: 
     - :default
     version: ">= 0"
@@ -11,11 +19,17 @@ dependencies:
 specs: 
 - activesupport: 
     version: 2.3.8
+- activerecord: 
+    version: 2.3.8
 - authlogic: 
     version: 2.1.6
+- mysql: 
+    version: 2.8.1
+- searchlogic: 
+    version: 2.4.24
 - will_paginate: 
     version: 2.3.14
-hash: 8a8b800e6ed7bb01a14763be671a8505756ff437
+hash: 1f02e0f1bf3facb4a20ef0d4c6a3b8629a1f1f63
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

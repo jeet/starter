@@ -174,12 +174,15 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "8a8b800e6ed7bb01a14763be671a8505756ff437"
+  FINGERPRINT  = "1f02e0f1bf3facb4a20ef0d4c6a3b8629a1f1f63"
   HOME         = 'D:/projects/starter/vendor/bundle/bundler'
-  AUTOREQUIRES = {:default=>[["authlogic", false], ["will_paginate", false]]}
+  AUTOREQUIRES = {:default=>[["authlogic", false], ["mysql", false], ["searchlogic", false], ["will_paginate", false]]}
   SPECS        = [
         {:loaded_from=>"C:/Ruby187/lib/ruby/gems/1.8/specifications/activesupport-2.3.8.gemspec", :load_paths=>["C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib"], :name=>"activesupport"},
+        {:loaded_from=>"C:/Ruby187/lib/ruby/gems/1.8/specifications/activerecord-2.3.8.gemspec", :load_paths=>["C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib"], :name=>"activerecord"},
         {:loaded_from=>"C:/Ruby187/lib/ruby/gems/1.8/specifications/authlogic-2.1.6.gemspec", :load_paths=>["C:/Ruby187/lib/ruby/gems/1.8/gems/authlogic-2.1.6/lib"], :name=>"authlogic"},
+        {:loaded_from=>"C:/Ruby187/lib/ruby/gems/1.8/specifications/mysql-2.8.1-x86-mingw32.gemspec", :load_paths=>["C:/Ruby187/lib/ruby/gems/1.8/gems/mysql-2.8.1-x86-mingw32/lib", "C:/Ruby187/lib/ruby/gems/1.8/gems/mysql-2.8.1-x86-mingw32/ext"], :name=>"mysql"},
+        {:loaded_from=>"D:/projects/starter/vendor/bundle/specifications/searchlogic-2.4.24.gemspec", :load_paths=>["D:/projects/starter/vendor/bundle/gems/searchlogic-2.4.24/lib"], :name=>"searchlogic"},
         {:loaded_from=>"D:/projects/starter/vendor/bundle/specifications/will_paginate-2.3.14.gemspec", :load_paths=>["D:/projects/starter/vendor/bundle/gems/will_paginate-2.3.14/lib"], :name=>"will_paginate"},
       ].map do |hash|
     if hash[:virtual_spec]

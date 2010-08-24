@@ -5,3 +5,5 @@ source "http://gems.github.com"
 
 gem "will_paginate"
 gem "authlogic"
+gem "searchlogic"
+gem "mysql"
