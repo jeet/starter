@@ -1,0 +1,27 @@
+--- 
+dependencies: 
+  authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
+  will_paginate: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- activesupport: 
+    version: 2.3.8
+- authlogic: 
+    version: 2.1.6
+- will_paginate: 
+    version: 2.3.14
+hash: 8a8b800e6ed7bb01a14763be671a8505756ff437
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org
+- Rubygems: 
+    uri: http://gems.rubyforge.org
+- Rubygems: 
+    uri: http://gemcutter.org
+- Rubygems: 
+    uri: http://gems.github.com
