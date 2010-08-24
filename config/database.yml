@@ -4,10 +4,8 @@ development:
   adapter: mysql
   database: poppt_development
   username: root
-  password: 
-  host: 127.0.0.1
-  encoding: utf8
-
+  password: password
+  
 test: &TEST
   adapter: mysql
   database: poppt_test

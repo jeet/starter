@@ -8,8 +8,10 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-    if @user.save
-      flash[:notice] = "Account registered!"
+    #@user.set_initial_state
+    if @user.save_without_session_maintenance
+      @user.deliver_activation_instructions!
+      flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
       redirect_back_or_default account_url
     else
       render :action => :new
@@ -33,4 +35,19 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
+  
+  def activate
+    @user = User.find_using_perishable_token(params[:activation_code], 1.week) || (raise Exception)
+    raise Exception if @user.active?
+  
+    if @user.activate!
+      flash[:notice] = "Your account has been activated!"
+      UserSession.create(@user, false) # Log user in manually
+      @user.deliver_welcome!
+      redirect_to account_url
+    else
+      render :action => :new
+    end
+  end
+
 end
