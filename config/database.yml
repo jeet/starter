@@ -27,7 +27,7 @@ production:
   adapter: mysql
   database: poppt_production
   username: auser
-  password: 
+  password: whatmatrics
   host: 
   encoding: utf8
 #  socket: /var/lib/mysql/mysql.sock
