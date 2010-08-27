@@ -2,7 +2,7 @@ source "http://rubygems.org"
 source "http://gems.rubyforge.org"
 source "http://gemcutter.org"
 source "http://gems.github.com"
-gem "rails" , '2.3.5'
+gem "rails", '2.3.4'
 gem "will_paginate"
 gem "authlogic"
 gem "searchlogic"
