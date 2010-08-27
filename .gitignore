@@ -2,3 +2,4 @@
 db\schema.rb
 *.log
 tmp
+.idea
