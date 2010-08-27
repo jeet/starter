@@ -25,6 +25,7 @@ namespace :deploy do
 	desc "#{t.to_s.capitalize} server"
 	task t, :roles => :app do
 	  invoke_command "cd #{deploy_to}/current; RAILS_ENV=production bundle install --relock"
+      invoke_command  "cd #{deploy_to}/current; RAILS_ENV=production rake db:migrate"
  	end
   end
 end
