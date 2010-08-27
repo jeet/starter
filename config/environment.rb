@@ -76,6 +76,6 @@ Rails::Initializer.run do |config|
     :password => "secret"
 	}
 end
-  ExceptionNotification::Notifier.exception_recipients = %w(sachin238@gmail.com jeet.ajay@gmail.com)
-  ExceptionNotification::Notifier.sender_address = %("Application Error" <starter.error@starter.com>)
-  ExceptionNotification::Notifier.email_prefix = "[Starter error] "
+  ExceptionNotifier.exception_recipients = %w(sachin238@gmail.com jeet.ajay@gmail.com)
+  ExceptionNotifier.sender_address = %("Application Error" <starter.error@starter.com>)
+  ExceptionNotifier.email_prefix = "[Starter error] "
