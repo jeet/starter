@@ -1,3 +1,4 @@
-.bundle\n
-db\schema.rb\n
-*.log\n
+.bundle
+db\schema.rb
+*.log
+tmp
