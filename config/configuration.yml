@@ -1,0 +1,4 @@
+adapter: mysql
+database: poppt_development
+username: root
+password: password

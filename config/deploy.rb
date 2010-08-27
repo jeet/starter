@@ -8,9 +8,9 @@ set :repository,  "git://github.com/jeet/starter.git"
 set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :app, "192.168.1.22"                          # Your HTTP server, Apache/etc
-role :web, "192.168.1.22"                          # This may be the same as your `Web` server
-role :db,  "192.168.1.22", :primary => true		   # This is where Rails migrations will run
+role :app, "172.16.16.49"                          # Your HTTP server, Apache/etc
+role :web, "172.16.16.49"                          # This may be the same as your `Web` server
+role :db,  "172.16.16.49", :primary => true		   # This is where Rails migrations will run
 
 set :user, "root"
 set :password, "advent@123"
@@ -25,7 +25,7 @@ namespace :deploy do
 	desc "#{t.to_s.capitalize} server"
 	task t, :roles => :app do
 	  invoke_command "cd #{deploy_to}/current; RAILS_ENV=production bundle install --relock"
-      invoke_command  "cd #{deploy_to}/current; RAILS_ENV=production rake db:migrate"
+    invoke_command  "cd #{deploy_to}/current; RAILS_ENV=production rake db:migrate"
  	end
   end
 end
