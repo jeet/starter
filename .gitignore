@@ -1,1 +1,3 @@
-.bundle/*.*
+.bundle\n
+db\schema.rb\n
+*.log\n
