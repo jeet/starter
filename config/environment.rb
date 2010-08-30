@@ -33,7 +33,7 @@ Rails::Initializer.run do |config|
   #config.plugin_paths += ["#{RAILS_ROOT}/../../Libs"]
   #config.plugins = [:authlogic]
 
-  config.plugins = [:exception_notification]  
+  config.plugins = [:exception_notification,:admin_data]  
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
