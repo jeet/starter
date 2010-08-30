@@ -5,11 +5,8 @@ class ApplicationController < ActionController::Base
   helper :all
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
-  include ExceptionNotification::Notifiable
-#  include ExceptionNotification::ConsiderLocal
+   include ExceptionNotification::Notifiable
    
-  #local_addresses.clear
-
    def admin_logged_in?
      return  current_user.is_admin?  unless current_user.blank?
      false
