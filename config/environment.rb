@@ -33,6 +33,7 @@ Rails::Initializer.run do |config|
   #config.plugin_paths += ["#{RAILS_ROOT}/../../Libs"]
   #config.plugins = [:authlogic]
 
+  config.plugins = [:exception_notification]  
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
@@ -76,6 +77,6 @@ Rails::Initializer.run do |config|
     :password => "secret"
 	}
 end
-  ExceptionNotifier.exception_recipients = %w(sachin238@gmail.com jeet.ajay@gmail.com)
-  ExceptionNotifier.sender_address = %("Application Error" <starter.error@starter.com>)
-  ExceptionNotifier.email_prefix = "[Starter error] "
+  ExceptionNotification::Notifier.exception_recipients = %w(sachin238@gmail.com jeet.ajay@gmail.com)
+  ExceptionNotification::Notifier.sender_address = %("Application Error" <starter.error@starter.com>)
+  ExceptionNotification::Notifier.email_prefix = "[Starter error] "

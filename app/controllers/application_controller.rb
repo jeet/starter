@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
   helper :all
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
-  include ExceptionNotifiable
-  local_addresses.clear
+  include ExceptionNotification::Notifiable
+  include ExceptionNotification::ConsiderLocal
+   
+  #local_addresses.clear
   
   private
     def current_user_session
