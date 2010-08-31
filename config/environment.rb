@@ -25,8 +25,8 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-    config.gem "capistrano"
-    
+  config.gem "capistrano"
+  config.gem "ambethia-recaptcha", :lib => "recaptcha/rails"
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -34,7 +34,7 @@ Rails::Initializer.run do |config|
   #config.plugin_paths += ["#{RAILS_ROOT}/../../Libs"]
   #config.plugins = [:authlogic]
 
-  config.plugins = [ :exception_notification, :all]  
+  config.plugins = [:exception_notification, :all]  
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
@@ -81,3 +81,5 @@ end
   ExceptionNotification::Notifier.exception_recipients = %w(sachin238@gmail.com jeet.ajay@gmail.com)
   ExceptionNotification::Notifier.sender_address = %("Application Error" <starter.error@starter.com>)
   ExceptionNotification::Notifier.email_prefix = "[Starter error] "
+  
+  

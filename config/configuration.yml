@@ -1,4 +1,2 @@
-adapter: mysql
-database: poppt_development
-username: root
-password: password
+RECAPTCHA_PUBLIC_KEY: 6Le7trwSAAAAAKIAJ27z-JnDC-pRrl-2LDWnA05e
+RECAPTCHA_PRIVATE_KEY: 6Le7trwSAAAAAHwBiXLGk87Fb0rgVHyi89Okv0-0

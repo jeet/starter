@@ -9,4 +9,5 @@ gem "searchlogic"
 gem "mysql"
 gem "capistrano"
 gem "friendly_id",'2.3.4'
+gem "ambethia-recaptcha", '0.2.2'
 

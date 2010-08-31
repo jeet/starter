@@ -9,3 +9,5 @@
 <br />
 <%= form.label :password_confirmation %><br />
 <%= form.password_field :password_confirmation %><br />
+<br />
+<%= recaptcha_tags :public_key => CONFIG['RECAPTCHA_PUBLIC_KEY']%>
