@@ -1,0 +1,85 @@
+--- 
+dependencies: 
+  ambethia-recaptcha: 
+    group: 
+    - :default
+    version: = 0.2.2
+  rails: 
+    group: 
+    - :default
+    version: = 2.3.5
+  searchlogic: 
+    group: 
+    - :default
+    version: ">= 0"
+  authlogic: 
+    group: 
+    - :default
+    version: ">= 0"
+  mysql: 
+    group: 
+    - :default
+    version: ">= 0"
+  will_paginate: 
+    group: 
+    - :default
+    version: ">= 0"
+  friendly_id: 
+    group: 
+    - :default
+    version: = 2.3.4
+  capistrano: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- activesupport: 
+    version: 2.3.5
+- rack: 
+    version: 1.0.1
+- actionpack: 
+    version: 2.3.5
+- actionmailer: 
+    version: 2.3.5
+- activerecord: 
+    version: 2.3.5
+- activeresource: 
+    version: 2.3.5
+- ambethia-recaptcha: 
+    version: 0.2.2
+- authlogic: 
+    version: 2.1.6
+- highline: 
+    version: 1.6.1
+- net-ssh: 
+    version: 2.0.23
+- net-scp: 
+    version: 1.0.3
+- net-sftp: 
+    version: 2.0.5
+- net-ssh-gateway: 
+    version: 1.0.1
+- capistrano: 
+    version: 2.5.19
+- friendly_id: 
+    version: 2.3.4
+- mysql: 
+    version: 2.8.1
+- rails: 
+    version: 2.3.5
+- searchlogic: 
+    version: 2.4.24
+- will_paginate: 
+    version: 2.3.14
+hash: 53402f067630cab39d154a6e9bd2a699858e1951
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org
+- Rubygems: 
+    uri: http://gems.rubyforge.org
+- Rubygems: 
+    uri: http://gemcutter.org
+- Rubygems: 
+    uri: http://gems.github.com
