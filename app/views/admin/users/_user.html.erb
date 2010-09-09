@@ -1,0 +1,22 @@
+<div class="table_cel" id="<%= dom_id(user) %>">
+    <li  class='user'>
+
+      <%- tool_links([:admin, user], :id => dom_id(user, :tools)) do -%>
+
+      <%- end -%>
+      <strong class="user_icon"><%= link_to user.login, admin_user_path(user) %></strong>
+      <tt>
+        (<%=h user.email %>)
+        last login at <%=h user.last_login_at %><br />
+      </tt>
+      <dt>
+        <span class="editable">
+          <%=h user.login %>
+    
+        </span>
+        | <span class="editable">
+
+        </span>
+      </dt>
+    </li>
+</div>

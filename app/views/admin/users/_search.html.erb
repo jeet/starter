@@ -1,0 +1,10 @@
+Search users
+<% form_for @search do |f| -%>
+    <div class="name"><%= f.label :login_like, "Login" %><%= f.text_field :login_like, :size => 23 %></div>
+    <div class="name"><%= f.label :email_like, "Email" %><%= f.text_field :email_like, :size => 23 %></div>
+    <div class="name"><%= f.label :created_at_eq, "Created" %><%= f.text_field :created_at_eq, :size => 23 %></div>
+    <p class="hide">
+        <%= f.submit "search", :name => nil %> or <%= link_to "reset", admin_users_path %>
+    </p>
+
+<% end -%>

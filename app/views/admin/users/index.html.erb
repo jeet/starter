@@ -1,0 +1,26 @@
+<!-- start sidebar -->
+<% content_for :left_menu  do %>
+
+
+<div id="search_filter" class="left_search">
+<%= render :partial => 'search' %>
+</div>
+<% end %>
+<!-- end sidebar -->
+<!-- start main content -->
+<div id="maincol" >
+    <%= auto_title %>
+    <%- restful_links(nil) do -%>
+        <%= link_to(t('admin.users.actions.new'), new_admin_user_path)  %>
+    <%- end -%>
+    <div class="table_cel">
+        <%= render :partial => 'admin/shared/pagination', :object => @users %>
+    </div>
+    <div class="table_cel">
+        <%= render :partial => 'search_orders' %>
+    </div>
+    <%= render :partial => 'user', :collection => @users %>
+    <div class="table_cel">
+        <%= render :partial => 'admin/shared/pagination', :object => @users %>
+    </div>
+</div>

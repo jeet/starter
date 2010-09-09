@@ -1,0 +1,37 @@
+
+/*** Admin Page ***/
+.admin_tab{
+ float:left;
+ position:relative;
+ width:100%;
+ font:bold 11px Arial;
+ padding:0;
+}
+.admin_tab ul{
+ margin:0;
+ padding:0px;
+ list-style:none;
+ line-height:20px;
+ text-align:center;
+}
+.admin_tab li{
+ display:inline;
+ height:25px;
+ text-align:center;
+}
+.admin_tab li a{
+ background:url(../images/admin-tab-bg.jpg) 0 0 repeat-x;
+ color:#007BE5;
+ padding:0 10px;
+ margin:0;
+ text-decoration:none;
+}
+.admin_tab li a:hover{
+ background:url(../images/admin-tab-bg-on.jpg) 0 0 repeat-x;
+ color:#007BE5;
+ padding:0 10px;
+ margin:0;
+ text-decoration:none;
+}
+
+/*** End Admin Page ***/

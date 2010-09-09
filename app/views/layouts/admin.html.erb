@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>poppt</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="title" content="poppt" />
+	<meta name="description" content="" />
+	<meta name="author" content="poppt" />
+	<meta name="keywords" content="poppt" />
+	<%= stylesheet_link_tag  "admin/style", "admin/admin_style" %>
+
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+
+
+<!--[if IE]>
+<style type="text/css">
+#main,
+#inner-container,
+#container {
+zoom:1;
+}
+</style>
+<![endif]-->
+
+
+<!--[if lte IE 6]>
+<style>
+img, ul,li { behavior: url(css/iepngfix.htc) }
+</style>
+<![endif]-->
+
+
+ </head>
+
+ <body>
+    <div id="pagewidth" >
+        <div id="header" >
+          <%= render :partial => "admin/shared/account_menu" %>
+            <div id="tabsH">
+                <ul>
+                    <%= render :partial => "admin/shared/admin_top_nav" %>
+                </ul>
+            </div>
+        </div>
+        <div id="twocols" class="clearfix">
+            <div id="maincol" >
+            <%= yield %>
+            </div>
+        </div>
+        <div id="leftcol" >
+            <%= yield :left_menu %>
+        </div>
+        <div id="footer" > Footer section </div>
+    </div>
+
+
+    <script>
+    function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}
+    </script>
+</body>
+</html>
