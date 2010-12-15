@@ -25,8 +25,14 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "will_paginate"
+  config.gem "authlogic"
+  config.gem "searchlogic"
+  config.gem "mysql"
   config.gem "capistrano"
-  config.gem "ambethia-recaptcha", :lib => "recaptcha/rails"
+  config.gem "friendly_id",'2.3.4'
+
+
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
