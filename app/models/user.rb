@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
 
   def is_admin?
     true  ## making it true for development, will be changed later
-    not global_admin.blank?
+    #not global_admin.blank?
   end
 
   def deliver_password_reset_instructions!

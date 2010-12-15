@@ -216,3 +216,18 @@ a img,:link img,:visited img {border:none; background:none; z-index:2;}
 #rightcol{display:none;} 
 #twocols, #maincol{width:100%; float:none;}
 }
+
+.details .row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.row .left_column{
+    width:150px;
+    float:left;
+    font-weight:bold;
+    font-size:13px;
+}
+.row .right_column{
+    width:400px;
+    float:left;
+}

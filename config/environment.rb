@@ -31,6 +31,7 @@ Rails::Initializer.run do |config|
   config.gem "mysql"
   config.gem "capistrano"
   config.gem "friendly_id",'2.3.4'
+  config.gem 'formtastic',:source => 'http://gemcutter.org'  , :version => '>=0.9.7'
 
 
   # Only load the plugins named here, in the order given. By default, all plugins 

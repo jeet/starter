@@ -1,0 +1,18 @@
+<%# content_for :left_menu  do %>
+
+
+<div id="search_filter" class="left_search">
+<%#= render :partial => 'search' %>
+</div>
+<%# end %>
+<h1>New User</h1>
+
+<% semantic_form_for @user, :url => admin_users_path do |f| %>
+ <% if current_user.is_admin? %>
+      <%= render :partial => 'form', :locals => {:f => f}%>
+    <% end %>
+    
+    <div class='submit_buttons' style="margin-left:228px;margin-top:10px;"><%= f.submit 'Create'%></div>
+
+ <% end %>
+

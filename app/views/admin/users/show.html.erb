@@ -1,0 +1,65 @@
+<%# content_for :left_menu  do %>
+
+
+<div id="search_filter" class="left_search">
+<%#= render :partial => 'search' %>
+</div>
+<%# end %>
+<h1><%= @user.login.capitalize%></h1>
+<div class="details">
+    <div class="row">
+      <div class="left_column">Email:</div>
+      <div class="right_column"><%= mail_to "#{@user.email}", @user.email %></div>
+      <div class="clearfix"></div>
+    </div>
+  
+    <div class="row">
+      <div class="left_column">Login:</div>
+      <div class="right_column"><%=h @user.login %></div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+      <div class="left_column">login_count:</div>
+      <div class="right_column"><%=h @user.login_count %></div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="left_column">last_request:</div>
+      <div class="right_column"><%=h @user.last_request_at %></div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="left_column">last_login:</div>
+      <div class="right_column"><%=h @user.last_login_at %></div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="left_column">current_login:</div>
+      <div class="right_column"><%=h @user.current_login_at %></div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="left_column">login_ip:</div>
+      <div class="right_column"><%=h @user.last_login_ip %></div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="row">
+      <div class="left_column">current_ip:</div>
+      <div class="right_column"><%=h @user.current_login_ip %></div>
+      <div class="clearfix"></div>
+    </div>
+
+</div>
+<%= link_to 'Edit', edit_admin_user_path(@user), :class=>"awesome" %>
+ 
