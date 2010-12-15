@@ -18,11 +18,11 @@ def restful_links(name_array, html_options={}, &block)
       unless object.new_record? && !%{new}.include?(controller.action_name)
         links << link_to(t('common.actions.index'), polymorphic_path(name_array.to_a - [object] << object.class.new), options[:index]) if permitted_to?(:index)
       end
-      links << link_to(t('common.actions.new'), new_polymorphic_path(name_array.to_a - [object] << object.class.new), options[:new]) if permitted_to?(:new)
+      links << link_to('new', new_polymorphic_path(name_array.to_a - [object] << object.class.new), options[:new]) if permitted_to?(:new)
       unless object.new_record?
-        links << link_to_unless(%{show}.include?(controller.action_name), t('common.actions.show'), polymorphic_path(name_array), options[:show]) if permitted_to?(:show, object)
-        links << link_to(t('common.actions.edit'), edit_polymorphic_path(name_array), options[:edit]) if permitted_to?(:edit, object)
-        links << link_to(t('common.actions.destroy'), polymorphic_path(name_array), options[:destroy]) if permitted_to?(:destroy, object)
+        links << link_to_unless(%{show}.include?(controller.action_name), 'show', polymorphic_path(name_array), options[:show]) if permitted_to?(:show, object)
+        links << link_to('edit', edit_polymorphic_path(name_array), options[:edit]) if permitted_to?(:edit, object)
+        links << link_to('destroy', polymorphic_path(name_array), options[:destroy]) if permitted_to?(:destroy, object)
       end
     end
     concat_array(links, {:class => "restful_links"}.merge(html_options), &block)
@@ -40,9 +40,9 @@ def restful_links(name_array, html_options={}, &block)
         :destroy => {:id => "destroy_#{object_name}_link", :class => ajax ? 'h-delete destroy_link' : 'destroy_link', :method => :delete, :confirm => t('common.confirms.destroy')}
       }
       options.each { |k,v| v.merge!(html_options.delete(k)) unless html_options[k].blank? }
-      links << link_to(t('common.actions.show'), polymorphic_path(name_array), options[:show]) #if permitted_to?(:show, object)
-      links << link_to(t('common.actions.edit'), edit_polymorphic_path(name_array), options[:edit]) #if permitted_to?(:edit, object)
-      links << link_to(t('common.actions.destroy'), polymorphic_path(name_array), options[:destroy]) #if permitted_to?(:destroy, object)
+      links << link_to('show', polymorphic_path(name_array), options[:show]) #if permitted_to?(:show, object)
+      links << link_to('edit', edit_polymorphic_path(name_array), options[:edit]) #if permitted_to?(:edit, object)
+      links << link_to('destroy', polymorphic_path(name_array), options[:destroy]) #if permitted_to?(:destroy, object)
     end
     concat_array(links, {:class => "tool_links hide"}.merge(html_options), &block)
    end

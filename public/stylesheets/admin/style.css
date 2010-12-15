@@ -147,7 +147,7 @@ a img,:link img,:visited img {border:none; background:none; z-index:2;}
 	border-bottom:2px solid #000;
 }
 .table_cel{
-	float:left;
+	/*float:left;*/
 	position:relative;
 	font:normal 12px Arial;
 	border-bottom:1px dotted #c0c0c0;

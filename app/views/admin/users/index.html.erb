@@ -11,7 +11,7 @@
 <div id="maincol" >
     <%= auto_title %>
     <%- restful_links(nil) do -%>
-        <%= link_to(t('admin.users.actions.new'), new_admin_user_path)  %>
+        <%= link_to 'new', new_admin_user_path  %>
     <%- end -%>
     <div class="table_cel">
         <%= render :partial => 'admin/shared/pagination', :object => @users %>

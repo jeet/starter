@@ -3,5 +3,5 @@ Order by:
 | <%= order @search, :by => :login, :as => at(User, :login) %>
 | <%= order @search, :by => :email, :as => at(User, :email) %>
 | <%= order @search, :by => :last_login_at, :as => at(User, :last_login_at) %>
-| <%= order @search, :by => :created_at, :as => t("common.created_at") %>
-| <%= order @search, :by => :updated_at, :as => t("common.updated_at") %>
+| <%= order @search, :by => :created_at, :as => 'Created At' %>
+| <%= order @search, :by => :updated_at, :as => 'Updated At' %>
